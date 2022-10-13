@@ -1,0 +1,20 @@
+.banner {
+  width: 100%;
+}
+.banner__content {
+  display: flex;
+}
+.banner__col {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.banner__logo {
+  max-width: 100%;
+}
+.banner__img-wrap {
+  @include bg-wrapper;
+  padding-bottom: 100%
+}
+.banner__img {
+  @include bg-image;
+}

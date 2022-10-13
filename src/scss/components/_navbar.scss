@@ -1,0 +1,27 @@
+.nav {
+  border-right: 1px solid $light;
+  padding: 20px;
+}
+.nav__list {
+  display: flex;
+}
+.nav__link {
+  padding:  5px;
+  margin: 0 10px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $light;
+    transition: $transition;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  background-color: $lavender;
+  border-bottom: 1px solid $light;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 200px;
+}
