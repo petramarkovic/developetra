@@ -6,7 +6,8 @@
 
 body {
   font-family: $font-default;
-  background-color: $lavender
+  background-color: $dark-purple;
+  overflow-x: hidden;
 }
 
 a {
@@ -16,10 +17,12 @@ a {
 ul {
   list-style-type: none;
 }
-
 .wrap {
   max-width: 1340px;
-  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+}
+.wrap--sm {
+  max-width: 960px;
 }

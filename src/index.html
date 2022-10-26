@@ -15,11 +15,11 @@
   <header class="header">
       <div class="wrap">
         <div class="header__container">
+          <a href="index.html" class="header__home">
+            <img class="header__logo" src="images/logo-3.png" alt="Developetra Logo">
+          </a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item">
-                <a href="javascript:;" class="link nav__link">Home</a>
-              </li>
               <li class="nav__item">
                 <a href="javascript:;" class="link nav__link">About</a>
               </li>
@@ -27,34 +27,107 @@
                 <a href="javascript:;" class="link nav__link">Portfolio</a>
               </li>
               <li class="nav__item">
-                <a href="javascript:;" class="link nav__link">Contact</a>
+                <a href="javascript:;" class="link link--cta nav__link">Contact</a>
               </li>
             </ul>
           </nav>
-          <a href="index.html" class="header__home">
-            <img class="header__logo" src="images/logo.png" alt="Developetra Logo">
-          </a>
         </div>
       </div>
   </header>
 
   <section class="banner">
+    <div class="banner__bg" style="background-image: url(images/banner-rose.png);"></div>
     <div class="wrap">
       <div class="banner__content">
-        <div class="banner__col">
-          <img class="banner__logo" src="images/banner-logo.png" alt="Developetra Logo">
-          <h1 class="h1">Front-end developer</h1>
-          <p>some text</p>
-          <a href="javascript:;">Call to action</a>
+        <div class="banner__col banner__col--flex">
+          <span class="tag banner__tag">Hi, it's Petra</span>
+          <h1 class="h1 banner__title">I use code to bring your beautiful designs to <span>&lt;life/&gt;</span>.</h1>
+          <a class="btn banner__btn" href="javascript:;">Call to action</a>
         </div>
         <div class="banner__col">
           <div class="banner__img-wrap">
-            <div class="banner__img has-cover" style="background-image: url(images/banner-bg-1.jpg);"></div>
+            <img class="banner__img" src="images/banner-img.png" alt="">
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="portfolio">
+    <div class="wrap">
+      <h2 class="h2 portfolio__title">Portfolio</h2>
+      <div class="portfolio__content">
+        <div class="item">
+          <div class="item__col">
+            <div class="item__img-wrap">
+              <img class="item__img" src="images/banner-bg-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="item__col">
+            <div class="item__info">
+              <div class="tag item__tag">item tag</div>
+              <h3 class="h3 item__title">Portfolio website headline</h3>
+              <p class="item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ea velit. Consectetur magni quibusdam assumenda, praesentium provident incidunt quas accusantium.</p>
+              <div class="item__btn-wrap">
+                <a href="javascript:;" class="btn">call to action</a>
+              <a href="javascript:;" class="btn btn--light">call to action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item item--reverse">
+          <div class="item__col">
+            <div class="item__img-wrap">
+              <img class="item__img" src="images/banner-bg-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="item__col">
+            <div class="item__info">
+              <div class="tag item__tag">item tag</div>
+              <h3 class="h3 item__title">Portfolio website headline</h3>
+              <p class="item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ea velit. Consectetur magni quibusdam assumenda, praesentium provident incidunt quas accusantium.</p>
+              <div class="item__btn-wrap">
+                <a href="javascript:;" class="btn">call to action</a>
+              <a href="javascript:;" class="btn btn--light">call to action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact__bg-wrap">
+      <div class="contact__bg has-cover" style="background-image: url(images/mark-lavender.png);"></div>
+    </div>
+    <div class="wrap">
+      <h2 class="h2 contact__title">Contact me</h2>
+      <div class="contact__content">
+        <div class="contact__col contact__col--flex">
+          <form class="form" action="/">
+            <div class="input-wrap">
+              <label for="name" class="label">Name:</label>
+              <input class="input" type="text" name="name" id="name" required>
+            </div>
+            <div class="input-wrap">
+              <label for="email" class="label">Email:</label>
+              <input class="input" type="email" name="email" id="email" required>
+            </div>
+            <div class="input-wrap">
+              <label for="message" class="label">Message:</label>
+              <textarea class="input input--textarea" name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn submit">Submit</button>
+          </form>
+        </div>
+        <div class="contact__col contact__col--img">
+          <div class="contact__img-wrap">
+            <div class="contact__img has-cover" style="background-image: url(images/mark-lavender.png);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

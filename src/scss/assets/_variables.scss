@@ -1,5 +1,4 @@
-$container-width: 1230px;
-$bp-medium: 990px;
+$bp-medium: 992px;
 $bp-small: 768px;
 
 $--small: $bp-small;
@@ -9,11 +8,14 @@ $--small: $bp-small;
 $--medium: $bp-medium;
 
 //COLORS
-$lavender: #dbd1e7;
-$lavender-dark: #724E91;
-$sand: #ebe5d3;
-$light: #f8f5f3;
-$light-2: #FBF7F4;
+// $lavender: #dbd1e7;
+$lavender: #c39df1;
+$eggshell: #ebe5d3;
+$sand: #f8f5f3;
+
+$dark-purple: #1b1a21;
+$grey: #CAC4CE;
+$linen: #F7ECE1; 
 
 $white: #fff;
 $black: #000;

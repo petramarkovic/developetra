@@ -6,11 +6,34 @@ button {
     border: 1px dashed rgba($black, 0.5);
   }
 }
-
-.link {
-  color: $white;
+.btn {
+  text-transform: lowercase;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 13px;
+  padding: 10px 25px;
+  color: $dark-purple;
+  transition: $transition;
+  border: 1px solid $lavender;
+  background-color: $lavender;
+  border-radius: 50px;
+  &:hover {
+    background-color: transparent;
+    color: $lavender;
+  }
+}
+.btn--light {
+  background-color: transparent;
+  color: $sand;
+  border: 1px solid $sand;
+  &:hover {
+    background-color: $sand;
+    color: $dark-purple;
+  }
+}
+.link {
+  color: $sand;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
   text-transform: lowercase;
 }

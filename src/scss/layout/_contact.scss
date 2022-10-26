@@ -1,0 +1,49 @@
+.contact {
+  width: 100%;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+.contact__bg-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: calc(100% + 100px);
+}
+.contact__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0%;
+  width: 50%;
+  height: 100%;
+    opacity: .03;
+    scale: 1.5;
+}
+.contact__title {
+  color: $lavender;
+  margin-bottom: 20px;
+}
+.contact__content {
+  display: flex;
+}
+.contact__col {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.contact__col--flex {
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+}
+.contact__col--img {
+  padding: 50px;
+}
+.contact__img-wrap {
+  @include bg-wrapper;
+  padding-bottom: 100%
+}
+.contact__img {
+  @include bg-image;
+}

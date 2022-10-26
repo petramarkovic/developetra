@@ -1,6 +1,5 @@
 .nav {
-  border-right: 1px solid $light;
-  padding: 20px;
+  padding: 20px 0;
 }
 .nav__list {
   display: flex;
@@ -16,8 +15,8 @@
     left: 0;
     width: 0;
     height: 1px;
-    background-color: $light;
     transition: $transition;
+    background-color: $sand;
   }
   &:hover {
     &::after {
