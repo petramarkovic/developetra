@@ -2,6 +2,7 @@
   font-weight: 100;
   font-size: 50px;
   line-height: 58px;
+  color: $sand;
   @media (max-width: $--small) {
     font-size: 33px;
     line-height: 52px;
@@ -9,14 +10,15 @@
 }
 
 .h2 {
+  color: $sand;
   font-weight: 500;
-  font-size: 33px;
+  font-size: 40px;
   line-height: 52px;
 }
 
 .h3 {
-  font-weight: 300;
-  font-size: 26px;
+  font-weight: 500;
+  font-size: 35px;
   line-height: 42px;
 }
 
@@ -39,8 +41,12 @@
 }
 .tag {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.2em;
-  color: $lavender;
+  color: $green;
   font-weight: 500;
+  padding-bottom: 10px;
+}
+.tag--sm {
+  font-size: 13px;
 }

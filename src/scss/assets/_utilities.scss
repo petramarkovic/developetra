@@ -1,17 +1,28 @@
 .sr-only {
   @include no-display;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 .text-center {
   text-align: center;
 }
-
 .text-uppercase {
   text-transform: uppercase;
 }
-
 .has-cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.mark {
+     position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }

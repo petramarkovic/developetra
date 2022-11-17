@@ -2,10 +2,18 @@
   width: 100%;
   padding: 90px 0;
   overflow: hidden;
+  position: relative;
+  .wrap{
+    .mark {
+      right: 150px;
+      left: auto;
+      top: 150px;
+      transform: scale(1.2);
+    }
+  }
 }
 .portfolio__title {
-  color: $lavender;
-  padding: 50px 0;
+  padding: 0 0 50px;
 }
 .portfolio__content {
   display: flex;
@@ -15,9 +23,11 @@
   flex: 1 1 100%;
   max-width: 100%;
   display: flex;
-  margin-bottom: 120px;
   position: relative;
   padding: 60px 0;
+  &:not(:last-of-type) {
+    margin-bottom: 120px;
+  }
 }
 .item--reverse {
   flex-direction: row-reverse;
@@ -57,7 +67,7 @@
   height: 100%;
 }
 .item__title {
-  color: $sand;
+  color: $orange;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -67,6 +77,27 @@
   font-weight: 300;
   font-size: 18px;
   line-height: 25px;
+}
+.item__tech {
+  margin: 15px 0;
+}
+.item__tech-title {
+  color: $sand;
+  font-size: 16px;
+  font-weight: 500;
+}
+.item__tech-list {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+.item__tech-item {
+  background-color: $lavender-dark;
+  color: $sand;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 6px;
 }
 .item__btn-wrap {
   display: flex;

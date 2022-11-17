@@ -8,7 +8,7 @@ button {
 }
 .btn {
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 13px;
   padding: 10px 25px;
   color: $dark-purple;
@@ -33,7 +33,11 @@ button {
 .link {
   color: $sand;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 28px;
   text-transform: lowercase;
+  transition: $transition;
+  &:hover {
+    color: $orange;
+  }
 }
