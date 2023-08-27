@@ -1,0 +1,56 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #121212;
+  scroll-behavior: smooth; }
+
+ul,
+ol {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.wrap {
+  max-width: 1420px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.h1 {
+  color: #dbd1e7;
+  font-size: 80px;
+  line-height: 100%;
+  opacity: 0.8; }
+
+.block {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.block__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+

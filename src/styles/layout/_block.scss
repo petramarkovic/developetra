@@ -1,0 +1,51 @@
+.block {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.block__mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.block__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+    border-radius: 12px;
+}
+
+.block__btn {
+    margin-top: 20px;
+}
+
+.block__img {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    width: 100%;
+    max-width: 150px;
+    transform: rotate(125deg);
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}

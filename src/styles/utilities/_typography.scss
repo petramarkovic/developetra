@@ -1,0 +1,20 @@
+.h1 {
+    color: $lavender;
+    font-size: 80px;
+    line-height: 100%;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.text {
+    font-size: 22px;
+    font-weight: $medium;
+    color: $seashell;
+    margin: 10px 0;
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
+}

@@ -1,9 +1,15 @@
 // fonts
-// $font-default: 'Montserrat', sans-serif;
+$font-default: 'Montserrat', sans-serif;
+
+$regular: 400;
+$medium: 500;
 
 // colors
 $white: #fff;
-$black: #000;
+$black: #1c1b1b;
+$lavender: #dbd1e7;
+$sand: #ebe5d3;
+$seashell: #f8f5f3;
 
 // transition
-$transition: 250ms ease-in-out;
+$transition: 250ms cubic-bezier(.17,.67,.83,.67);

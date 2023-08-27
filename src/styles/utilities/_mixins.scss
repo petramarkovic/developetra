@@ -8,3 +8,25 @@
     position: absolute;
     width: 1px;
 }
+
+@mixin hover {
+	@media (hover: hover) and (pointer: fine) {
+		.loaded &:hover {
+			@content;
+		}
+	}
+}
+
+@mixin animation {
+	.loaded & {
+		@content;
+	}
+}
+
+@mixin focus {
+	@media only screen and (min-width: 1200px) {
+		.active-focus &:focus {
+			@content;
+		}
+	}
+}

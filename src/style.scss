@@ -1,11 +1,13 @@
 
-@import './utilities/variables';
-@import './utilities/mixins';
-@import './utilities/layout';
-@import './utilities/typography';
+@import './styles/utilities/variables';
+@import './styles/utilities/mixins';
+@import './styles/utilities/layout';
+@import './styles/utilities/typography';
 
-@import './components/buttons';
+@import './styles/components/buttons';
+@import './styles/components/list';
 
-@import './layout/header';
-@import './layout/banner';
-@import './layout/footer';
+@import './styles/layout/header';
+@import './styles/layout/banner';
+@import './styles/layout/block';
+@import './styles/layout/footer';
