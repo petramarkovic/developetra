@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build prod": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
