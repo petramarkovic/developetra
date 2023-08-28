@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -36,8 +36,10 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'styles.[contenthash].css',
 		}),
-		new CopyPlugin([
-			{ from: 'src/robots.txt', to: 'robots.txt' }
-		]),
+		new CopyPlugin({
+			patterns: [
+				{ from: 'src/robots.txt', to: 'robots.txt' },
+			  ],
+		}),
 	]
 };
