@@ -36,8 +36,10 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'styles.[contenthash].css',
 		}),
-		new CopyPlugin([
-			{ from: 'src/robots.txt', to: 'robots.txt' }
-		]),
+		new CopyPlugin({
+			patterns: [
+				{ from: 'src/robots.txt', to: 'robots.txt' },
+			  ],
+		}),
 	]
 };
