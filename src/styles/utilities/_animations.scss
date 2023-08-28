@@ -1,0 +1,14 @@
+
+.translate-y {
+	transform: translateY(100vh);
+}
+
+
+@keyframes dot-flashing {
+	0% {
+	  background-color: $lavender;
+	}
+	50%, 100% {
+	  background-color: rgba(152, 128, 255, 0.2);
+	}
+  }

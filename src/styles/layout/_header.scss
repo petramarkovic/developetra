@@ -1,0 +1,23 @@
+.header {
+	width: 100%;
+	padding: 30px 0;
+}
+
+.header__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.header__home {
+	@include hover {
+		.header__logo {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.header__logo {
+	width: 40px;
+	transition: transform $transition;
+}

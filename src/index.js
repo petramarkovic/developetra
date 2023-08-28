@@ -5,15 +5,7 @@ import './assets/linkedin.svg';
 import './assets/instagram.svg';
 import './assets/email.svg';
 import './assets/arrow.svg';
+import './assets/developetra-rose-mark.svg';
 
-function init() {
-    const html = document.querySelector('html');
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            html.classList.add('loaded');
-        }, 10);
-    });
-}
-
-init();
+import init from './js/init';
+init.init();
