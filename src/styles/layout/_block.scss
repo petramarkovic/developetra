@@ -77,11 +77,18 @@
 		animation-delay: 1s;
 	}
 	@media screen and (max-width: 768px) {
+		width: 5px;
+		height: 5px;
+		&::before,
+		&::after {
+			width: 5px;
+			height: 5px;
+		}
 		&::before {
-			left: -10px;
+			left: -7px;
 		}
 		&::after {
-			left: 10px;
+			left: 7px;
 		}
 	}
 }
