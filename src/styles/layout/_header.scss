@@ -41,10 +41,11 @@
 		&::before,
 		&::after {
 			background: $black;
-			margin-top: 0;
+			// margin-top: 0;
 		}
 		&::before {
 			transform: rotate(45deg);
+			margin-top: 15px;
 		}
 		&::after {
 			transform: rotate(-45deg);
@@ -85,12 +86,12 @@
 }
 
 .nav__link {
-	color: $lavender;
+	color: $seashell;
 	font-weight: $bold;
 	transition: $transition;
 	letter-spacing: 0.04em;
 	@include hover {
-		color: $seashell;
+		color: $lavender;
 	}
 	@media screen and (max-width: 768px) {
 		color: $black;
@@ -115,6 +116,7 @@
 	position: relative;
 	display: block;
 	z-index: 40;
+	height: 100%;
 	&::before,
 	&::after {
 		content: '';
@@ -128,9 +130,9 @@
 		transition: $transition;
 	}
 	&::before {
-		margin-top: -6px;
+		margin-top: 25px;
 	}
 	&::after {
-		margin-top: 6px;
+		margin-top: 15px;
 	}
 }

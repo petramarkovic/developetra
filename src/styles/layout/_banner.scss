@@ -10,13 +10,33 @@
 	right: 5vw;
 	width: 50%;
 	height: 175px;
+	z-index: 10;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	@media screen and (max-width: 768px) {
+		height: 76px;
+	}
+}
+
+.banner__bg {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	right: 85px;
+	width: 38%;
+	height: 100%;
 	opacity: 0.2;
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	transition: 800ms cubic-bezier(.17,.67,.83,.67);
-	@include hover {
-		opacity: 1;
+	@media screen and (max-width: 768px) {
+		right: auto;
+		top: 50%;
+		left: 50%;
+		width: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0 auto;
 	}
 }
 
@@ -26,6 +46,13 @@
 	justify-content: center;
 	align-items: flex-start;
 	height: 100%;
+}
+
+.banner__title {
+	max-width: 700px;
+	@media screen and (max-width: 768px) {
+		max-width: 350px;
+	}
 }
 
 .banner__text {
