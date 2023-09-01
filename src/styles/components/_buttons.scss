@@ -1,22 +1,56 @@
 .btn {
 	font-family: $font-default;
-	font-weight: $xblack;
+	font-weight: $medium;
 	letter-spacing: 0.06em;
 	padding: 10px 22px;
-	border-radius: 20px;
+	border-radius: $border-radius;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	transition: all $transition;
+	@media screen and (max-width: 768px){
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .btn--primary {
-	color: $lavender;
+	color: $black;
 	border: 1px solid $lavender;
-	background: transparent;
-
+	background: $lavender;
 	@include hover {
-		background: $lavender;
+		background: $seashell;
+		border-color: $seashell;
+	}
+}
+
+.btn--primary-dark {
+	color: $seashell;
+	border: 1px solid $black;
+	background: $black;
+	@include hover {
+		background: $seashell;
+		border-color: $seashell;
 		color: $black;
+	}
+}
+
+.btn--secondary {
+	border: 1px solid $lavender;
+	color: $lavender;
+	@include hover {
+		color: $seashell;
+		border-color: $seashell;
+	}
+}
+
+.btn--secondary-dark {
+	border: 1px solid $black;
+	color: $black;
+	@include hover {
+		color: $seashell;
+		border-color: $black;
+		background: $black;
 	}
 }
 

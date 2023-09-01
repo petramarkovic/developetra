@@ -6,8 +6,10 @@
 
 body {
 	font-family: $font-default;
-	background-color: $seashell;
+	color: $sand;
+	background-color: $black;
 	scroll-behavior: smooth;
+	position: relative;
 }
 
 ul li,
@@ -29,8 +31,33 @@ img {
 	padding: 0 20px;
 	margin: 0 auto;
 	width: 100%;
+	height: 100%;
 }
 
 .sr-only {
 	@include no-display;
+}
+
+.section {
+	height: 100vh;
+	padding: 60px 0;
+}
+
+.section--color {
+	margin: 0 auto;
+	border-radius: $border-radius;
+	overflow: hidden;
+	width: calc(100% - 32px);
+	color: $black;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.scroll-disabled {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
 }

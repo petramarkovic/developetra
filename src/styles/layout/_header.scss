@@ -1,12 +1,18 @@
+
 .header {
 	width: 100%;
 	padding: 30px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
 }
 
 .header__content {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 }
 
 .header__home {
@@ -20,4 +26,111 @@
 .header__logo {
 	width: 40px;
 	transition: transform $transition;
+}
+
+.nav {
+	position: relative;
+}
+
+.nav--active {
+	.nav__list {
+		opacity: 1;
+		visibility: visible;
+	}
+	.menu__icon {
+		&::before,
+		&::after {
+			background: $black;
+			margin-top: 0;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: $lavender;
+		padding: 50px;
+		transition: $transition;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.nav__item {
+	&:not(:last-of-type) {
+		margin-right: 35px;
+	}
+	@media screen and (max-width: 768px) {
+		margin-bottom: 15px;
+	}
+}
+
+.nav__link {
+	color: $lavender;
+	font-weight: $bold;
+	transition: $transition;
+	letter-spacing: 0.04em;
+	@include hover {
+		color: $seashell;
+	}
+	@media screen and (max-width: 768px) {
+		color: $black;
+		font-size: 30px;
+	}
+}
+
+.menu {
+	cursor: pointer;
+	width: 44px;
+	height: 44px;
+	border: none;
+	background: transparent;
+	position: relative;
+	display: none;
+	@media screen and (max-width: 768px) {
+		display: block;
+	}
+}
+
+.menu__icon {
+	position: relative;
+	display: block;
+	z-index: 40;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $seashell;
+		border-radius: $border-radius;
+		transition: $transition;
+	}
+	&::before {
+		margin-top: -6px;
+	}
+	&::after {
+		margin-top: 6px;
+	}
 }

@@ -1,49 +1,65 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from 'split-type';
 
 const animation = {
 	body: document.querySelector('body'),
-	blockMask: document.querySelector('.js-block-mask'),
-	blockContent: document.querySelectorAll('.js-block-content'),
 
 	init: function() {
-		this.removeMask();
-		this.backgroundChange();
-		this.showContent();
+		this.headingsAnimation();
+		this.textAnimation();
 	},
 
-	removeMask: function() {
-		gsap.to(this.blockMask, {
-			opacity: 0,
-			delay: 1,
-			duration: 2,
-			ease: 'sine'
+	headingsAnimation: function() {
+		const splitHeadings = document.querySelectorAll('.reveal-heading');
+		splitHeadings.forEach((char, i) => {
+			gsap.registerPlugin(ScrollTrigger);
+
+			const text = new SplitType(char, {
+				types: 'chars'
+			})
+
+			gsap.from(text.chars, {
+				scrollTrigger: {
+					trigger: char,
+					start: 'top 80%',
+					end: 'top 20%',
+					scrub: false,
+					toggleActions: 'play play complete reverse'
+				},
+				opacity: 0,
+				y: '100',
+				scaleY: 0,
+				transformOrigin: 'top',
+				stagger: 0.1
+			})
 		});
 	},
 
-	backgroundChange: function() {
-		gsap.to(this.body, {
-			backgroundColor: '#0c0b0b',
-			duration: 1,
-			delay: 1.5,
-			ease: 'sine'
-		});
-	},
+	textAnimation: function() {
+		const splitText = document.querySelectorAll('.reveal-text');
+		splitText.forEach((char, i) => {
+			gsap.registerPlugin(ScrollTrigger);
 
-	showContent: function() {
-		let tl = gsap.timeline({
-			delay: 2.5,
-			defaults: {
-				duration: 0.5,
-				ease: 'ease'
-			},
-			smoothChildTiming: true
-		});
+			const text = new SplitType(char, {
+				types: 'chars'
+			})
 
-		tl.to(this.blockContent[0], {y: 0})
-		.to(this.blockContent[1], {y: 0})
-		.to(this.blockContent[2], {y: 0})
-		.to(this.blockContent[3], {y: 0})
+			gsap.from(text.chars, {
+				scrollTrigger: {
+					trigger: char,
+					start: 'top bottom',
+					end: 'top 40%',
+					scrub: true,
+					toggleActions: 'play play complete reverse'
+				},
+				opacity: 0,
+				stagger: 0.1,
+				duration: 1
+			})
+		});
 	}
+
 }
 
 export default animation;

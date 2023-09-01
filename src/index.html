@@ -14,7 +14,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="I'm a self-taught and ambitious female front-end developer from Croatia, dedicated to crafting exceptional web experiences. My passion for coding and continuous learning drives me to create visually captivating and user-friendly websites."/>
+	<meta name="description" content="I'm a self-taught and ambitious female front-end developer from Croatia, dedicated to crafting exceptional web experiences. My passion for coding and continuous learning drives me to create visually captivating and user-friendly websites.">
 	<title>Developetra | Portfolio</title>
 </head>
 
@@ -25,54 +25,132 @@
 				<a href="/" class="header__home" title="Developetra Homepage">
 					<img class="header__logo" src="developetra-rose-mark.svg" alt="Developetra Logo">
 				</a>
+				<nav class="nav js-nav">
+					<button type="button" class="menu js-menu" title="Open menu">
+						<span class="sr-only">Open menu</span>
+						<span class="menu__icon"></span>
+					</button>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#work" class="nav__link">work</a>
+						</li>
+						<li class="nav__item">
+							<a href="#about" class="nav__link">about</a>
+						</li>
+						<li class="nav__item">
+							<a href="#blog" class="nav__link">blog</a>
+						</li>
+						<li class="nav__item">
+							<a href="#contact" class="nav__link">contact</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>
-	<section class="block">
-		<div class="wrap">
-			<div class="block__mask js-block-mask" style="background-image: url(developetra-mask.png)"></div>
-			<div class="block__content">
-				<h1 class="h1 block__title translate-y  js-block-content">Building
-					<span class="block__dot-flashing"></span>
-				</h1>
-				<p class="text block__text translate-y  js-block-content">want to say hello or have an interesting proposal for me?</p>
-				<a href="mailto:petramarkovic996@gmail.com" class="btn btn--primary block__btn translate-y  js-block-content" title="Send an email">
-					<span class="btn__icon">
-						<img src="email.svg" alt="Email Icon">
-					</span>
-					email
-				</a>
-				<ul class="list translate-y  js-block-content">
-					<li class="list__item">
-						<a href="https://www.linkedin.com/in/petra-markovic-aa669b198/" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">LinkedIn Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="linkedin.svg" alt="LinkedIn Icon">
-							</span>
-						</a>
-					</li>
-					<li class="list__item">
-						<a href="https://github.com/petramarkovic" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">Github Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="github.svg" alt="Github Icon">
-							</span>
 
-						</a>
-					</li>
-					<li class="list__item">
-						<a href="https://instagram.com/developetra" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">Instagram Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="instagram.svg" alt="Instagram Icon">
-							</span>
-						</a>
-					</li>
-				</ul>
+	<section class="section banner">
+		<div class="banner__mask" style="background-image: url(developetra-logo.svg)"></div>
+		<div class="wrap">
+			<div class="banner__content">
+				<h1 class="h1 banner__title reveal-heading">Title</h1>
+				<p class="text banner__text reveal-text">Nibh orci cras conubia per semper eget congue malesuada porttitor.</p>
+				<div class="banner__cta">
+					<a href="" class="btn btn--primary banner__btn">see work history</a>
+					<a href="" class="btn btn--secondary banner__btn">get in touch</a>
+				</div>
 			</div>
 		</div>
 	</section>
-	<div class="rounded js-rounded"></div>
-	<div class="rounded rounded--sm js-rounded-sm"></div>
+
+	<section class="section section--color work" id="work">
+		<div class="wrap">
+			<div class="work__content">
+				<h2 class="h2 work__title reveal-heading">Work history</h2>
+				<p class="text work__text reveal-text">Nibh orci cras conubia per semper eget congue malesuada porttitor, magna magnis ad montes molestie feugiat habitasse.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section about" id="about">
+		<div class="wrap">
+			<div class="about__content">
+				<h2 class="h2 about__title reveal-heading">About</h2>
+				<p class="text about__text reveal-text">Nibh orci cras conubia per semper eget congue malesuada porttitor, magna magnis ad montes molestie feugiat habitasse facilisis, accumsan rhoncus dui posuere turpis neque aenean purus. Prhoncus dui posuere turpis neque aenean purus.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--color blog js-blog" id="blog">
+		<div class="wrap">
+			<div class="blog__content swiper">
+				<h2 class="h2 blog__title reveal-heading">Blog</h2>
+				<!-- <div class="blog__row swiper-wrapper">
+					<a href="/" class="blog__article swiper-slide">
+						<img src="placeholder-image.jpeg" alt="Blog featured image" class="blog__article-img">
+						<h3 class="h3 blog__article-title">Blog title</h3>
+						<ul class="blog__article-list">
+							<li class="blog__article-list-item">category</li>
+						</ul>
+						<span class="decorator-line"></span>
+					</a>
+					<a href="/" class="blog__article swiper-slide">
+						<img src="placeholder-image.jpeg" alt="Blog featured image" class="blog__article-img">
+						<h3 class="h3 blog__article-title">Blog title</h3>
+						<ul class="blog__article-list">
+							<li class="blog__article-list-item">category</li>
+						</ul>
+						<span class="decorator-line"></span>
+					</a>
+					<a href="/" class="blog__article swiper-slide">
+						<img src="placeholder-image.jpeg" alt="Blog featured image" class="blog__article-img">
+						<h3 class="h3 blog__article-title">Blog title</h3>
+						<ul class="blog__article-list">
+							<li class="blog__article-list-item">category</li>
+						</ul>
+						<span class="decorator-line"></span>
+					</a>
+					<a href="/" class="blog__article swiper-slide">
+						<img src="placeholder-image.jpeg" alt="Blog featured image" class="blog__article-img">
+						<h3 class="h3 blog__article-title">Blog title</h3>
+						<ul class="blog__article-list">
+							<li class="blog__article-list-item">category</li>
+						</ul>
+						<span class="decorator-line"></span>
+					</a>
+					<a href="/" class="blog__article swiper-slide">
+						<img src="placeholder-image.jpeg" alt="Blog featured image" class="blog__article-img">
+						<h3 class="h3 blog__article-title">Blog title</h3>
+						<ul class="blog__article-list">
+							<li class="blog__article-list-item">category</li>
+						</ul>
+						<span class="decorator-line"></span>
+					</a>
+				</div> -->
+			</div>
+			<!-- <div class="blog__controls">
+				<div class="swiper-button-prev blog__btn blog__btn--prev"></div>
+				<div class="swiper-button-next blog__btn blog__btn--next"></div>
+			</div> -->
+		</div>
+	</section>
+
+	<section class="section contact" id="contact">
+		<div class="wrap">
+			<div class="contact__content">
+				<h2 class="h2 contact__title reveal-heading">Get in touch</h2>
+				<p class="text contact__text reveal-text">Nibh orci cras conubia per semper eget congue malesuada porttitor.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="wrap">
+			<div class="footer__content">
+
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>
