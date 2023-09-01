@@ -30,6 +30,7 @@
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
+	z-index: -1;
 	@media screen and (max-width: 768px) {
 		right: auto;
 		top: 50%;
