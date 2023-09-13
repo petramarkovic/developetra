@@ -15,11 +15,7 @@
 	background-repeat: no-repeat;
 	opacity: 0.4;
 	@media screen and (max-width: 768px) {
-		right: auto;
-		left: 50%;
-		width: 50%;
-		transform: translateX(-50%);
-		margin: 0 auto;
+		display: none;
 	}
 }
 
