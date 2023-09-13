@@ -2,6 +2,9 @@
 	overflow: hidden;
 	padding-top: 100px;
 	position: relative;
+	@media screen and (max-width: 768px) {
+		padding-bottom: 100px;
+	}
 }
 
 .banner__mask {
@@ -47,6 +50,10 @@
 	justify-content: center;
 	align-items: flex-start;
 	height: 100%;
+	margin-top: 250px;
+	@media screen and (max-width: 768px) {
+		margin-top: 150px;
+	}
 }
 
 .banner__title {
