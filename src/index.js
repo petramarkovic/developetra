@@ -13,6 +13,10 @@ import './assets/favicon.ico';
 import './assets/favicon-16x16.png';
 import './assets/favicon-32x32.png';
 import './assets/mstile-150x150.png';
+import './assets/placeholder-image.jpeg';
+import './assets/developetra-logo.svg';
+import './assets/peca-mark.svg';
+import './assets/developetra-primary-mark.png';
 
 import init from './js/init';
 init.init();

@@ -1,0 +1,17 @@
+
+.blog {
+	background-color: $sand;
+	overflow: hidden;
+	position: relative;
+}
+
+.blog__text {
+	font-size: 30px;
+	position: absolute;
+	right: 200px;
+	bottom: 20%;
+	@media screen and (max-width: 768px) {
+		right: 20px;
+		font-size: 20px;
+	}
+}

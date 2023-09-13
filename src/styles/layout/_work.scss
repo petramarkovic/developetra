@@ -1,0 +1,55 @@
+
+.work {
+	background-color: $lavender;
+	position: relative;
+}
+
+.work__mask {
+	position: absolute;
+	bottom: 0;
+	right: 85px;
+	width: 25%;
+	height: 50%;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.4;
+	@media screen and (max-width: 768px) {
+		right: auto;
+		left: 50%;
+		width: 50%;
+		transform: translateX(-50%);
+		margin: 0 auto;
+	}
+}
+
+.work__content {
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.work__skills {
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.work__skills-title {
+	font-weight: $xblack;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+
+.work__skill {
+	background-color: $black;
+	color: $seashell;
+	padding: 8px 12px;
+	margin-right: 10px;
+	border-radius: $border-radius;
+	font-weight: $bold;
+	margin-bottom: 15px;
+}

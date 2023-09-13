@@ -8,71 +8,172 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="I'm a self-taught and ambitious female front-end developer from Croatia, dedicated to crafting exceptional web experiences. My passion for coding and continuous learning drives me to create visually captivating and user-friendly websites."/>
+	<meta name="description" content="I'm a self-taught and ambitious female front-end developer from Croatia, dedicated to crafting exceptional web experiences. My passion for coding and continuous learning drives me to create visually captivating and user-friendly websites.">
 	<title>Developetra | Portfolio</title>
 </head>
 
 <body>
-	<header class="header">
+	<header class="header js-header">
 		<div class="wrap">
 			<div class="header__content">
 				<a href="/" class="header__home" title="Developetra Homepage">
 					<img class="header__logo" src="developetra-rose-mark.svg" alt="Developetra Logo">
 				</a>
+				<nav class="nav js-nav">
+					<button type="button" class="menu js-menu" title="Open menu">
+						<span class="sr-only">Open menu</span>
+						<span class="menu__icon"></span>
+					</button>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="javascript:;" class="nav__link js-nav-link">work</a>
+						</li>
+						<li class="nav__item">
+							<a href="javascript:;" class="nav__link js-nav-link">about</a>
+						</li>
+						<!-- <li class="nav__item">
+							<a href="#blog" class="nav__link js-nav-link">blog</a>
+						</li> -->
+						<li class="nav__item">
+							<a href="javascript:;" class="nav__link js-nav-link">contact</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>
-	<section class="block">
-		<div class="wrap">
-			<div class="block__mask js-block-mask" style="background-image: url(developetra-mask.png)"></div>
-			<div class="block__content">
-				<h1 class="h1 block__title translate-y  js-block-content">Building
-					<span class="block__dot-flashing"></span>
-				</h1>
-				<p class="text block__text translate-y  js-block-content">want to say hello or have an interesting proposal for me?</p>
-				<a href="mailto:petramarkovic996@gmail.com" class="btn btn--primary block__btn translate-y  js-block-content" title="Send an email">
-					<span class="btn__icon">
-						<img src="email.svg" alt="Email Icon">
-					</span>
-					email
-				</a>
-				<ul class="list translate-y  js-block-content">
-					<li class="list__item">
-						<a href="https://www.linkedin.com/in/petra-markovic-aa669b198/" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">LinkedIn Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="linkedin.svg" alt="LinkedIn Icon">
-							</span>
-						</a>
-					</li>
-					<li class="list__item">
-						<a href="https://github.com/petramarkovic" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">Github Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="github.svg" alt="Github Icon">
-							</span>
 
-						</a>
+	<section class="section banner">
+		<div class="banner__mask" style="background-image: url(developetra-logo.svg)"></div>
+        <!-- <div class="banner__bg" style="background-image: url(peca-mark.svg);"></div> -->
+		<div class="wrap">
+			<div class="banner__content">
+				<h1 class="h1 banner__title reveal-heading">Crafting <wbr>digital <wbr>dreams</h1>
+				<p class="text banner__text">I'm a code sorceress crafting stunning web realms with finesse and flair.</p>
+				<div class="banner__cta">
+					<a href="#work" class="btn btn--primary banner__btn">see work history</a>
+					<a href="#contact" class="btn btn--secondary banner__btn">get in touch</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--color work js-section" id="work">
+		<div class="work__mask" style="background-image: url(developetra-primary-mark.png);"></div>
+		<div class="wrap">
+			<div class="work__content">
+				<h2 class="h2 work__title reveal-heading">Edu & Work history</h2>
+				<p class="text work__text reveal-text">From the halls of education to the front lines of web development, my journey is a tale of creativity and expertise converging to sculpt captivating digital landscapes. Now, let me take you through my educational and professional milestones.</p>
+				<ul class="list">
+					<li class="list__item">
+						<i class="iconoir-book list__icon"></i>
+						Frontend Crash Course at Inchoo, Osijek, Croatia
 					</li>
 					<li class="list__item">
-						<a href="https://instagram.com/developetra" target="_blank" class="btn btn--icon list__link">
-							<span class="sr-only">Instagram Profile</span>
-							<span class="btn__icon">
-								<img class="icon" src="instagram.svg" alt="Instagram Icon">
-							</span>
+						<i class="iconoir-book list__icon"></i>
+						Web Design Training Course at Janus College, Osijek, Croatia
+					</li>
+					<li class="list__item">
+						<i class="iconoir-dev-mode-laptop list__icon"></i>
+						Frontend Developer (fulltime) at Horizont Solutions, Osijek, Croatia
+					</li>
+					<li class="list__item">
+						<i class="iconoir-book list__icon"></i>
+						Frontend Dev Training Course at >Vega IT, Novi Sad, Serbia
+					</li>
+					<li class="list__item">
+						<i class="iconoir-dev-mode-laptop list__icon"></i>
+						Frontend Developer (fulltime) at Vega IT, Novi Sad, Serbia
+					</li>
+				</ul>
+				<div class="work__skills">
+					<span class="work__skills-title">Skills:</span>
+					<p class="work__skill">Html5</p>
+					<p class="work__skill">Css/Scss</p>
+					<p class="work__skill">JavaScript/jQuery</p>
+					<p class="work__skill">webpack/gulp</p>
+					<p class="work__skill">gsap</p>
+					<p class="work__skill">Shopify</p>
+					<p class="work__skill">Figma/Adobe Photoshop</p>
+					<p class="work__skill">git</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section about js-section" id="about">
+		<div class="wrap">
+			<div class="about__content">
+				<h2 class="h2 about__title reveal-heading">About</h2>
+				<p class="text about__text reveal-text">Meet Developetra, the fearless coding maven who dances through the digital realm as a self-taught front-end developer for over 2 years. With a passion for pixels and a flair for finesse, Developetra's love affair with her job is more electrifying than a thunderstorm on a summer night. She's the architect of elegant websites, the curator of captivating user experiences, and the conductor of symphonies in code. She's not just a front-end developer; she's a maestro of the web, and she's here to make it a cooler, more beautiful place, one line of code at a time.</p>
+				<p class="text about__text reveal-text">In her free time, she enjoys going to the gym, eating good food, drinking marvelous cocktails, traveling, spending time in nature, petting dogs and hanging out with dear people.</p>
+				<div class="about__img-holder">
+					<img class="about__img" src="peca-mark.svg" alt="Developetra mark">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="section blog js-blog" id="blog">
+		<div class="wrap">
+			<div class="blog__content">
+				<h2 class="h2 blog__title reveal-heading">Blog</h2>
+				<span class="blog__text">Comming soon...</span>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="section section--color contact js-section" id="contact">
+		<div class="wrap">
+			<div class="contact__content">
+				<h2 class="h2 contact__title reveal-heading">Get in touch</h2>
+				<p class="text contact__text reveal-text">
+					Ready to embark on an exciting digital journey together? Whether you have questions, ideas, or bold projects in mind, I'm all ears! Drop me a line using the channels below and let's turn your vision into reality. Your message is a spark away from igniting something amazing!</p>
+				<ul class="contact__list">
+					<li class="contact__item">
+						<a href="mailto:petramarkovic996@gmail.com" class="contact__link">
+							<i class="iconoir-mail contact__icon"></i>
+							<span class="sr-only">Mail</span>
+						</a>
+					</li>
+					<li class="contact__item">
+						<a href="https://www.github.com/petramarkovic" class="contact__link">
+							<i class="iconoir-github contact__icon"></i>
+							<span class="sr-only">Github</span>
+						</a>
+					</li>
+					<li class="contact__item">
+						<a href="https://www.linkedin.com/in/petra-markovic-aa669b198/" class="contact__link">
+							<i class="iconoir-linkedin contact__icon"></i>
+							<span class="sr-only">LinkedIn</span>
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
-	<div class="rounded js-rounded"></div>
-	<div class="rounded rounded--sm js-rounded-sm"></div>
+
+	<footer class="footer">
+		<div class="wrap">
+			<div class="footer__content">
+				<span class="footer__copy">
+					<i class="iconoir-copyright footer__icon"></i>
+					developetra | 2023
+				</span>
+				<button type="button" class="footer__btn js-scroll-top">
+					<i class="iconoir-nav-arrow-up footer__icon"></i>
+					<span class="sr-only">Go to top</span>
+				</button>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>

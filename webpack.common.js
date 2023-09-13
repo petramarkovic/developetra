@@ -19,8 +19,8 @@ module.exports = {
 				use: 'babel-loader',
 			},
 			{
-				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+				test:  /\.(s?)css$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(png|svg|jpg|ico|jpeg|gif)$/i,
@@ -32,9 +32,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			favicon: './src/assets/favicon.ico',
-		}),
-		new MiniCssExtractPlugin({
-			filename: 'styles.[contenthash].css',
 		}),
 		new CopyPlugin({
 			patterns: [
