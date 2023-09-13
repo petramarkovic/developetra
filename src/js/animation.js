@@ -49,7 +49,7 @@ const animation = {
 				scrollTrigger: {
 					trigger: char,
 					start: 'top bottom',
-					end: 'top 40%',
+					end: 'top 30%',
 					scrub: true,
 					toggleActions: 'play play complete reverse'
 				},

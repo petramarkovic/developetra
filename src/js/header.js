@@ -1,6 +1,7 @@
 const header = {
 	nav: document.querySelector('.js-nav'),
 	menu: document.querySelector('.js-menu'),
+	links: document.querySelectorAll('.js-nav-link'),
 	navActiveClass: 'nav--active',
 
 	body: document.querySelector('body'),
@@ -11,6 +12,7 @@ const header = {
 
 	init: function() {
 		this.toggleNavbar();
+		this.linksEventHandler();
 	},
 
 	toggleNavbar: function() {
@@ -18,6 +20,29 @@ const header = {
 			this.nav.classList.contains(this.navActiveClass) ? this.nav.classList.remove(this.navActiveClass) : this.nav.classList.add(this.navActiveClass);
 			this.nav.classList.contains(this.navActiveClass) ? this.disableScroll() : this.enableScroll();
 		});
+	},
+
+	linksEventHandler: function() {
+		this.links.forEach((link, index) => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const sections = document.querySelectorAll('.js-section');
+				const top = sections[index].getBoundingClientRect().top + document.documentElement.scrollTop;
+				if (this.nav.classList.contains(this.navActiveClass)) {
+					this.enableScroll();
+					this.nav.classList.remove(this.navActiveClass);
+					window.scrollTo({
+						top: top,
+						behavior: 'smooth'
+					})
+				} else {
+					window.scrollTo({
+						top: top,
+						behavior: 'smooth'
+					})
+				}
+			});
+		})
 	},
 
 	disableScroll: function() {

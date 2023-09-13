@@ -2,27 +2,16 @@
 .blog {
 	background-color: $sand;
 	overflow: hidden;
+	position: relative;
 }
 
-// .blog__wrap {
-// 	width: 100%;
-// 	display: flex;
-// 	align-items: center;
-// 	height: 100%;
-// 	position: relative;
-// }
-
-// .blog__controls {
-// 	position: absolute;
-// 	bottom: 25px;
-// 	right: 50px;
-// 	display: flex;
-// }
-
-// .blog__btn {
-// 	position: relative !important;
-// 	top: auto !important;
-// 	left: auto !important;
-// 	right: auto !important;
-// 	z-index: 20;
-// }
+.blog__text {
+	font-size: 30px;
+	position: absolute;
+	right: 200px;
+	bottom: 20%;
+	@media screen and (max-width: 768px) {
+		right: 20px;
+		font-size: 20px;
+	}
+}

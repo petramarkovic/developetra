@@ -16,6 +16,7 @@ import './assets/mstile-150x150.png';
 import './assets/placeholder-image.jpeg';
 import './assets/developetra-logo.svg';
 import './assets/peca-mark.svg';
+import './assets/developetra-primary-mark.png';
 
 import init from './js/init';
 init.init();

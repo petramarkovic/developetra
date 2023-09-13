@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import animation from './animation.js';
 import blog from './blog.js';
 import header from './header.js';
+import scroll from './scroll.js';
 
 const init = {
 	init: function() {
@@ -34,6 +35,7 @@ const init = {
 			animation.init();
 			header.init();
 			blog.init();
+			scroll.init();
 		});
 
 	}
