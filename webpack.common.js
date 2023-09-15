@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -20,12 +21,20 @@ module.exports = {
 			},
 			{
 				test:  /\.(s?)css$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 			{
-				test: /\.(png|svg|jpg|ico|jpeg|gif)$/i,
-				type: 'asset/resource'
-			},
+				test: /\.(png|jpg|svg|ico|jpeg|gif)$/i,
+				use: [
+					{
+					  loader: 'file-loader',
+					  options: {
+						name: '[name].[ext]',
+						outputPath: 'assets/images',
+					  },
+					},
+				  ],
+			}
 		],
 	},
 	plugins: [
@@ -38,5 +47,12 @@ module.exports = {
 				{ from: 'src/robots.txt', to: 'robots.txt' },
 			  ],
 		}),
-	]
+		new MiniCssExtractPlugin({
+			filename: 'style.css',
+		}),
+	],
+	optimization: {
+		minimize: true,
+		minimizer: [new TerserPlugin()],
+	},
 };

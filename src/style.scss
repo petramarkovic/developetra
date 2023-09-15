@@ -1,4 +1,5 @@
 
+@import './styles/utilities/fonts';
 @import './styles/utilities/variables';
 @import './styles/utilities/mixins';
 @import './styles/utilities/layout';
@@ -8,10 +9,10 @@
 @import './styles/components/buttons';
 @import './styles/components/list';
 
+@import './styles/layout/loader';
 @import './styles/layout/header';
 @import './styles/layout/banner';
 @import './styles/layout/work';
 @import './styles/layout/about';
-@import './styles/layout/blog';
 @import './styles/layout/contact';
 @import './styles/layout/footer';
