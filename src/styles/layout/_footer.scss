@@ -21,8 +21,6 @@
 
 .footer__icon {
 	margin-right: 10px;
-	font-size: 22px;
-	transition: $transition;
 }
 
 .footer__btn {
@@ -44,8 +42,5 @@
 	}
 	@include hover {
 		background-color: $lavender;
-		.footer__icon {
-			color: $seashell;
-		}
 	}
 }

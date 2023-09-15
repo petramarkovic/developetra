@@ -5,26 +5,23 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+	<link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="I'm a self-taught and ambitious female front-end developer from Croatia, dedicated to crafting exceptional web experiences. My passion for coding and continuous learning drives me to create visually captivating and user-friendly websites.">
 	<title>Developetra | Portfolio</title>
 </head>
 
-<body>
+<body class="">
+	<!-- <div class="loader js-loader"></div> -->
 	<header class="header js-header">
 		<div class="wrap">
 			<div class="header__content">
 				<a href="/" class="header__home" title="Developetra Homepage">
-					<img class="header__logo" src="developetra-rose-mark.svg" alt="Developetra Logo">
+					<img class="header__logo" width="40" height="40" src="assets/images/developetra-rose-mark.svg" alt="Developetra Logo" loading="lazy">
 				</a>
 				<nav class="nav js-nav">
 					<button type="button" class="menu js-menu" title="Open menu">
@@ -38,9 +35,6 @@
 						<li class="nav__item">
 							<a href="javascript:;" class="nav__link js-nav-link">about</a>
 						</li>
-						<!-- <li class="nav__item">
-							<a href="#blog" class="nav__link js-nav-link">blog</a>
-						</li> -->
 						<li class="nav__item">
 							<a href="javascript:;" class="nav__link js-nav-link">contact</a>
 						</li>
@@ -51,8 +45,7 @@
 	</header>
 
 	<section class="section banner">
-		<div class="banner__mask" style="background-image: url(developetra-logo.svg)"></div>
-        <!-- <div class="banner__bg" style="background-image: url(peca-mark.svg);"></div> -->
+		<div class="banner__mask" style="background-image: url(assets/images/developetra-logo.svg)"></div>
 		<div class="wrap">
 			<div class="banner__content">
 				<h1 class="h1 banner__title reveal-heading">Crafting <wbr>digital <wbr>dreams</h1>
@@ -66,30 +59,30 @@
 	</section>
 
 	<section class="section section--color work js-section" id="work">
-		<div class="work__mask" style="background-image: url(developetra-primary-mark.png);"></div>
+		<div class="work__mask js-lazy-load" style="background-image: url(assets/images/developetra-primary-mark.png);"></div>
 		<div class="wrap">
 			<div class="work__content">
 				<h2 class="h2 work__title reveal-heading">Edu & Work history</h2>
 				<p class="text work__text reveal-text">From the halls of education to the front lines of web development, my journey is a tale of creativity and expertise converging to sculpt captivating digital landscapes. Now, let me take you through my educational and professional milestones.</p>
 				<ul class="list">
 					<li class="list__item">
-						<i class="iconoir-book list__icon"></i>
+						<img src="assets/images/book.svg" width="24" height="24" loading="lazy" alt="Book Icon" class="list__icon">
 						Frontend Crash Course at Inchoo, Osijek, Croatia
 					</li>
 					<li class="list__item">
-						<i class="iconoir-book list__icon"></i>
+						<img src="assets/images/book.svg" width="24" height="24" loading="lazy" alt="Book Icon" class="list__icon">
 						Web Design Training Course at Janus College, Osijek, Croatia
 					</li>
 					<li class="list__item">
-						<i class="iconoir-dev-mode-laptop list__icon"></i>
+						<img src="assets/images/laptop.svg" width="24" height="24" loading="lazy" alt="Laptop Icon" class="list__icon">
 						Frontend Developer (fulltime) at Horizont Solutions, Osijek, Croatia
 					</li>
 					<li class="list__item">
-						<i class="iconoir-book list__icon"></i>
+						<img src="assets/images/book.svg" width="24" height="24" loading="lazy" alt="Book Icon" class="list__icon">
 						Frontend Dev Training Course at >Vega IT, Novi Sad, Serbia
 					</li>
 					<li class="list__item">
-						<i class="iconoir-dev-mode-laptop list__icon"></i>
+						<img src="assets/images/laptop.svg" width="24" height="24" loading="lazy" alt="Laptop Icon" class="list__icon">
 						Frontend Developer (fulltime) at Vega IT, Novi Sad, Serbia
 					</li>
 				</ul>
@@ -115,20 +108,11 @@
 				<p class="text about__text reveal-text">Meet Developetra, the fearless coding maven who dances through the digital realm as a self-taught front-end developer for over 2 years. With a passion for pixels and a flair for finesse, Developetra's love affair with her job is more electrifying than a thunderstorm on a summer night. She's the architect of elegant websites, the curator of captivating user experiences, and the conductor of symphonies in code. She's not just a front-end developer; she's a maestro of the web, and she's here to make it a cooler, more beautiful place, one line of code at a time.</p>
 				<p class="text about__text reveal-text">In her free time, she enjoys going to the gym, eating good food, drinking marvelous cocktails, traveling, spending time in nature, petting dogs and hanging out with dear people.</p>
 				<div class="about__img-holder">
-					<img class="about__img" src="peca-mark.svg" alt="Developetra mark">
+					<img class="about__img" width="300" height="380" src="assets/images/peca-mark.svg" alt="Developetra mark" loading="lazy">
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<!-- <section class="section blog js-blog" id="blog">
-		<div class="wrap">
-			<div class="blog__content">
-				<h2 class="h2 blog__title reveal-heading">Blog</h2>
-				<span class="blog__text">Comming soon...</span>
-			</div>
-		</div>
-	</section> -->
 
 	<section class="section section--color contact js-section" id="contact">
 		<div class="wrap">
@@ -139,19 +123,22 @@
 				<ul class="contact__list">
 					<li class="contact__item">
 						<a href="mailto:petramarkovic996@gmail.com" class="contact__link">
-							<i class="iconoir-mail contact__icon"></i>
+							<img src="assets/images/email.svg" width="60" height="60" loading="lazy" alt="Petra Markovic Email" class="
+							contact__icon">
 							<span class="sr-only">Mail</span>
 						</a>
 					</li>
 					<li class="contact__item">
 						<a href="https://www.github.com/petramarkovic" class="contact__link">
-							<i class="iconoir-github contact__icon"></i>
+							<img src="assets/images/github.svg" width="60" height="60" loading="lazy" alt="Petra Markovic Github" class="
+							contact__icon">
 							<span class="sr-only">Github</span>
 						</a>
 					</li>
 					<li class="contact__item">
 						<a href="https://www.linkedin.com/in/petra-markovic-aa669b198/" class="contact__link">
-							<i class="iconoir-linkedin contact__icon"></i>
+							<img src="assets/images/linkedin.svg" width="60" height="60" loading="lazy" alt="Petra Markovic Linkedin" class="
+							contact__icon">
 							<span class="sr-only">LinkedIn</span>
 						</a>
 					</li>
@@ -164,16 +151,15 @@
 		<div class="wrap">
 			<div class="footer__content">
 				<span class="footer__copy">
-					<i class="iconoir-copyright footer__icon"></i>
+					<img src="assets/images/copy.svg" loading="lazy" alt="Copyright Icon" width="24" height="24" class="footer__icon">
 					developetra | 2023
 				</span>
 				<button type="button" class="footer__btn js-scroll-top">
-					<i class="iconoir-nav-arrow-up footer__icon"></i>
+					<img src="assets/images/arrow.svg" width="24" height="24"  loading="lazy" alt="Up arrow Icon" class="footer__icon">
 					<span class="sr-only">Go to top</span>
 				</button>
 			</div>
 		</div>
 	</footer>
-
 </body>
 </html>
