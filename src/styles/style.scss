@@ -4,6 +4,9 @@
 @import './config/mixins';
 @import './config/layout';
 
+// -- ui 
+@import './ui/buttons';
+
 // -- components
 @import './components/header';
 @import './components/banner';

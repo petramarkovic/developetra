@@ -7,12 +7,14 @@ const Header = () => {
   return (
 	<header className="header">
 		<Wrap>
-			<a href="#" className="header__home">
-				<span className='heaedr__home-text'>.developetra</span>
-			</a>
-			<div className='header__row'>
-				<Button>Checkout my projects</Button>
-				<Navbar />
+			<div className="header__content">
+				<a href="#" className="header__home">
+					<span className='header__home-text'>.developetra</span>
+				</a>
+				<div className='header__row'>
+					<Button>Checkout my projects</Button>
+					<Navbar />
+				</div>
 			</div>
 		</Wrap>
 	</header>

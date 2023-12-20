@@ -1,0 +1,16 @@
+// -- buttons
+.btn {
+	font-family: $font-default;
+	background-color: $white;
+	color: $black;
+	border-radius: $border-radius;
+	border: none;
+	padding: 8px 20px;
+	font-size: 13px;
+	@include transition($transition);
+	cursor: pointer;
+	@include hover {
+		color: $white;
+		background-color: $black;
+	}
+}

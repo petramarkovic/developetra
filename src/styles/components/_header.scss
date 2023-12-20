@@ -1,7 +1,141 @@
 // -- header
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	padding: 30px 0;
+	z-index: 20;
+}
+
+.header__content {
+	@include flex-container(row, space-between, center);
+}
+
+.header__home {
+	color: $black;
+	text-decoration: none;
+}
+
+.header__home-text {
+	font-family: $font-accent;
+	font-size: 24px;
+	line-height: 1;
+}
+
+.header__row {
+	@include flex-container(row, space-between, center);
+	gap: 40px;
+}
+
+.nav--active {
+	.nav__menu-icon-line {
+		&:first-child {
+			transform: translate(-0.1rem) rotate(-45deg);
+		}
+		&:nth-child(2) {
+			transform: translateY(0.3rem) scaleX(0);
+		}
+		&:nth-child(3) {
+			transform: translate(-0.1rem,0.7rem) rotate(45deg);
+		}
+	}
+	.nav__list {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(-50%);
+	}
+}
+
+.nav__menu {
+	font-family: $font-default;
+	color: $black;
+	font-size: 13px;
+	background: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.nav__menu-icon {
+	position: relative;
+    display: inline-block;
+    width: 1rem;
+    height: 0.9rem;
+	pointer-events: none;
+    margin-left: 1rem;
+}
+
+.nav__menu-icon-line {
+	pointer-events: none;
+	position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+	transition: transform .3s ease-in-out,background-color .3s ease-in-out .15s;
+	&:first-child {
+		transform-origin: right center;
+	}
+	&:nth-child(2) {
+		transform: translate(0.14rem,0.3rem) scaleX(.7);
+	}
+	&:nth-child(3) {
+		transform: translateY(0.6rem);
+    	transform-origin: right center;
+	}
+}
+
+.nav__list {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(100%);
+	width: 100%;
+	height: 100vh;
+	height: 100svh;
+	background-color: $background;
+	z-index: 10;
+	padding: 0 40px;
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.nav__item {
+	margin-bottom: 0.5rem;
+	color: $grey;
+	font-family: $font-accent;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: transparent;
+		border: 1px solid $grey;
+	}
+}
+
+.nav__link {
+	display: block;
+	width: 100%;
+	padding: 40px;
+	font-size: 40px;
+	letter-spacing: -0.02rem;
+	font-weight: $light;
+	color: $grey;
+	border-bottom: 1px solid $grey;
+	transition: $transition;
+	cursor: pointer;
+	@include hover {
+		border-color: $black;
+		color: $black;
+	}
 }
