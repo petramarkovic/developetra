@@ -1,0 +1,17 @@
+// -- banner
+.banner {
+	@include media-breakpoint-up(lg) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		height: 100vh;
+	}
+	@include media-breakpoint-down(lg) {
+		@include flex-container(row, center, center, wrap);
+	}
+}
+
+.banner__col {
+	@include media-breakpoint-down(lg) {
+		@include flex-child(100%, 30px);
+	}
+}

@@ -38,6 +38,14 @@
 	}
 }
 
+@mixin absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 // @include center-element;
 @mixin center-element {
 	position: absolute;
@@ -68,11 +76,22 @@
 }
 
 // @include flex-container(column, space-around, center);
-@mixin flex-container($direction: row, $justify: center, $align: center) {
+@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
 	display: flex;
 	flex-direction: $direction;
 	justify-content: $justify;
 	align-items: $align;
+	flex-wrap: $wrap;
+}
+
+@mixin flex-child($val: 100%, $gap: null) {
+	@if $gap == null {
+		flex: 1 1 $val;
+		max-width: $val;
+	} @else {
+		flex: 1 1 calc($val - $gap);
+		max-width: calc($val - $gap);
+	}
 }
 
 // @include transition(all, 0.5s, ease-in-out);
@@ -102,64 +121,85 @@ $grid-breakpoints: (
 ) !default;
 
 
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+	$n: index($breakpoint-names, $name);
+	@if not $n {
+	  @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+	}
+	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+  @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$max: map-get($breakpoints, $name);
+	@return if($max and $max > 0, $max - .02, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+	@return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
-
 	@if $min {
-		@media only screen and (min-width: $min) {
-			@content;
-		}
-	} @else {
+	  @media (min-width: $min) {
 		@content;
+	  }
+	} @else {
+	  @content;
 	}
 }
 
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
 	$max: breakpoint-max($name, $breakpoints);
-
 	@if $max {
-		@media only screen and (max-width: $max) {
-			@content;
-		}
-	} @else {
+	  @media (max-width: $max) {
 		@content;
+	  }
+	} @else {
+	  @content;
 	}
 }
 
 @mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($lower, $breakpoints);
 	$max: breakpoint-max($upper, $breakpoints);
-
+  
 	@if $min != null and $max != null {
-		@media only screen and (min-width: $min) and (max-width: $max) {
-			@content;
-		}
+	  @media (min-width: $min) and (max-width: $max) {
+		@content;
+	  }
 	} @else if $max == null {
-		@include media-breakpoint-up($lower, $breakpoints) {
-			@content;
-		}
+	  @include media-breakpoint-up($lower, $breakpoints) {
+		@content;
+	  }
 	} @else if $min == null {
-		@include media-breakpoint-down($upper, $breakpoints) {
-			@content;
-		}
+	  @include media-breakpoint-down($upper, $breakpoints) {
+		@content;
+	  }
 	}
 }
 
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	$max: breakpoint-max($name, $breakpoints);
+	$min:  breakpoint-min($name, $breakpoints);
+	$next: breakpoint-next($name, $breakpoints);
+	$max:  breakpoint-max($next, $breakpoints);
 
 	@if $min != null and $max != null {
-		@media only screen and (min-width: $min) and (max-width: $max) {
-			@content;
-		}
+	  @media (min-width: $min) and (max-width: $max) {
+		@content;
+	  }
 	} @else if $max == null {
-		@include media-breakpoint-up($name, $breakpoints) {
-			@content;
-		}
+	  @include media-breakpoint-up($name, $breakpoints) {
+		@content;
+	  }
 	} @else if $min == null {
-		@include media-breakpoint-down($name, $breakpoints) {
-			@content;
-		}
+	  @include media-breakpoint-down($next, $breakpoints) {
+		@content;
+	  }
 	}
 }
