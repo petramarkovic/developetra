@@ -1,0 +1,165 @@
+// -- mixins
+@mixin no-display {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin hover {
+	@media (hover: hover) and (pointer: fine) {
+		.loaded &:hover {
+			@content;
+		}
+	}
+}
+
+@mixin animation {
+	.loaded & {
+		@content;
+	}
+}
+
+@mixin focus {
+	@media only screen and (min-width: 1200px) {
+		.active-focus &:focus {
+			@content;
+		}
+	}
+}
+
+@mixin placeholder {
+	&::placeholder {
+		@content;
+	}
+}
+
+// @include center-element;
+@mixin center-element {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// @include center-element-x;
+@mixin center-element-x {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+// @include center-element-y;
+@mixin center-element-y {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// @include aspect-ratio(16, 9);
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	width: 100%;
+	padding-bottom: percentage($height / $width);
+}
+
+// @include flex-container(column, space-around, center);
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// @include transition(all, 0.5s, ease-in-out);
+@mixin transition($property, $duration: 0.3s, $timing-function: ease-in-out) {
+	transition: $property $duration $timing-function;
+}
+
+
+// @include prefix(border-radius, 5px);
+@mixin prefix($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+
+// -- breakpoints
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+
+	@if $min {
+		@media only screen and (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $max {
+		@media only screen and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($lower, $breakpoints);
+	$max: breakpoint-max($upper, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media only screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($lower, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($upper, $breakpoints) {
+			@content;
+		}
+	}
+}
+
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media only screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($name, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($name, $breakpoints) {
+			@content;
+		}
+	}
+}
