@@ -5,7 +5,10 @@
 	left: 0;
 	width: 100%;
 	padding: 30px 0;
-	z-index: 20;
+	.btn {
+		position: relative;
+		z-index: 30;
+	}
 }
 
 .header__content {
@@ -15,6 +18,9 @@
 .header__home {
 	color: $black;
 	text-decoration: none;
+	position: relative;
+	left: 3.333%;
+	z-index: 30;
 }
 
 .header__home-text {
@@ -26,6 +32,8 @@
 .header__row {
 	@include flex-container(row, space-between, center);
 	gap: 40px;
+	position: relative;
+	right: 3.333%;
 }
 
 .nav--active {
@@ -45,6 +53,10 @@
 		visibility: visible;
 		transform: translateX(-50%);
 	}
+	.nav__link {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 .nav__menu {
@@ -56,6 +68,8 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	position: relative;
+	z-index: 30;
 }
 
 .nav__menu-icon {
@@ -89,53 +103,56 @@
 }
 
 .nav__list {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%) translateY(100%);
 	width: 100%;
 	height: 100vh;
 	height: 100svh;
-	background-color: $background;
-	z-index: 10;
-	padding: 0 40px;
+	background-color: $background-secondary;
+	z-index: 20;
+	padding: 90px 3.3333%;
 	opacity: 0;
 	visibility: hidden;
-	transition: transform 1s ease-in-out, opacity 1s ease-in-out, visibility 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.25s ease-in-out, visibility 0.5s ease-in-out;
+	@include flex-container(column, center, flex-start);
 }
 
 .nav__item {
 	margin-bottom: 0.5rem;
 	color: $grey;
-	font-family: $font-accent;
 	position: relative;
-	&::before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 20px;
-		transform: translateY(-50%);
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background: transparent;
-		border: 1px solid $grey;
+	@include transition(all);
+	overflow: hidden;
+	line-height: 1;
+	width: 100%;
+	@include hover {
+		.nav__link {
+			color: $black;
+		}
 	}
 }
 
 .nav__link {
 	display: block;
 	width: 100%;
-	padding: 40px;
+	padding: 40px 40px 40px 0;
 	font-size: 40px;
 	letter-spacing: -0.02rem;
 	font-weight: $light;
 	color: $grey;
-	border-bottom: 1px solid $grey;
-	transition: $transition;
+	transform: translateY(100%);
+	opacity: 1;
 	cursor: pointer;
-	@include hover {
-		border-color: $black;
-		color: $black;
+	transition: opacity $transition, transform $transition-cubic;
+	&--first {
+		transition-delay: 0.5s;
+	}
+	&--second {
+		transition-delay: 0.75s;
+	}
+	&--third {
+		transition-delay: 1s;
 	}
 }

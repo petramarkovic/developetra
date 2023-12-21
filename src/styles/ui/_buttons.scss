@@ -7,7 +7,7 @@
 	border: none;
 	padding: 8px 20px;
 	font-size: 13px;
-	@include transition($transition);
+	@include transition(all);
 	cursor: pointer;
 	@include hover {
 		color: $white;
