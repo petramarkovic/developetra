@@ -9,7 +9,7 @@ const Header = () => {
 		<Wrap>
 			<div className="header__content">
 				<a href="#" className="header__home">
-					<span className='header__home-text'>.developetra</span>
+					<span className='header__home-text'>.logo</span>
 				</a>
 				<div className='header__row'>
 					<Button>Checkout my projects</Button>

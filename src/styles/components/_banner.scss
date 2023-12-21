@@ -12,6 +12,6 @@
 
 .banner__col {
 	@include media-breakpoint-down(lg) {
-		@include flex-child(100%, 30px);
+		@include flex-child(100%);
 	}
 }
