@@ -1,5 +1,6 @@
 // -- banner
 .banner {
+	position: relative;
 	@include media-breakpoint-up(lg) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -14,4 +15,12 @@
 	@include media-breakpoint-down(lg) {
 		@include flex-child(100%);
 	}
+}
+
+.banner__text-scroll {
+	position: absolute;
+	left: 3.3333%;
+	bottom: 3.3333%;
+	text-transform: uppercase;
+	font-size: 13px;
 }

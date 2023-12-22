@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis'
 import Header from "./components/containers/Header";
 import Banner from "./components/containers/Banner";
 import Footer from "./components/containers/Footer";
+import LargeCard from "./components/containers/LargeCard";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <main>
         <Banner />
+        <LargeCard color='peach'/>
       </main>
       <Footer />
     </>
