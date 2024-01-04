@@ -30,7 +30,6 @@
 }
 
 .header__home-text {
-	font-family: $font-accent;
 	font-size: 24px;
 	line-height: 1;
 }
@@ -40,6 +39,9 @@
 	gap: 40px;
 	position: relative;
 	right: 3.333%;
+	@include media-breakpoint-down(sm) {
+		gap: 1rem;
+	}
 }
 
 .nav--active {
@@ -57,11 +59,7 @@
 	.nav__list {
 		opacity: 1;
 		visibility: visible;
-		transform: translateX(0);
-	}
-	.nav__link {
 		transform: translateY(0);
-		opacity: 1;
 	}
 }
 
@@ -76,6 +74,12 @@
 	cursor: pointer;
 	position: relative;
 	z-index: 30;
+	line-height: 1;
+}
+
+.nav__menu-text {
+	position: relative;
+	bottom: 2px;
 }
 
 .nav__menu-icon {
@@ -112,8 +116,8 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	transform: translateX(100%);
-	width: 50vw;
+	transform: translateY(100%);
+	width: 100vw;
 	height: 100vh;
 	height: 100svh;
 	background-color: $background-secondary;
@@ -130,36 +134,25 @@
 	margin-bottom: 0.5rem;
 	color: $grey;
 	position: relative;
-	@include transition(all);
-	overflow: hidden;
 	line-height: 1;
 	width: 100%;
-	@include hover {
-		.nav__link {
-			color: $black;
-		}
-	}
 }
 
 .nav__link {
 	display: block;
 	width: 100%;
-	padding: 40px 40px 40px 0;
-	font-size: 40px;
+	padding: 20px 20px 20px 0;
+	font-size: 3.5rem;
 	letter-spacing: -0.02rem;
 	font-weight: $light;
 	color: $grey;
-	transform: translateY(100%);
 	opacity: 1;
 	cursor: pointer;
-	transition: opacity $transition, transform $transition-cubic;
-	&--first {
-		transition-delay: 0.5s;
+	transition: color $transition-cubic;
+	@include hover {
+		color: $black;
 	}
-	&--second {
-		transition-delay: 0.75s;
-	}
-	&--third {
-		transition-delay: 1s;
+	@include media-breakpoint-down(sm) {
+		font-size: 2rem;
 	}
 }

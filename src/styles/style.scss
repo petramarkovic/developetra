@@ -3,6 +3,7 @@
 @import './config/variables';
 @import './config/mixins';
 @import './config/layout';
+@import './config/typography';
 
 // -- ui 
 @import './ui/buttons';
@@ -10,5 +11,7 @@
 // -- components
 @import './components/header';
 @import './components/banner';
+@import './components/text-banner';
 @import './components/large-card';
+@import './components/contact';
 @import './components/footer';

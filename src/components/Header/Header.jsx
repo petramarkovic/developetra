@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
-import Button from '../ui/Button';
+import { Navbar } from '../Navbar';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+export const Header = () => {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 	const [visible, setVisible] = useState(true);
 
@@ -30,11 +30,11 @@ const Header = () => {
   return (
 	<header className={`header ${!visible ? 'header--hidden' : ''}`}>
 		<div className="header__content">
-			<a href="#" className="header__home">
-				<span className='header__home-text'>.developetra</span>
-			</a>
+			<Link to="/" className="header__home">
+				<span className='header__home-text'>NAKD</span>
+			</Link>
 			<div className='header__row'>
-				<Button>Checkout my projects</Button>
+				<a href="https://calendly.com/d/4z7-bt3-d58/one-off-meeting" target='_blank' className='btn'>Book a call</a>
 				<Navbar />
 			</div>
 		</div>
@@ -42,4 +42,3 @@ const Header = () => {
   )
 }
 
-export default Header

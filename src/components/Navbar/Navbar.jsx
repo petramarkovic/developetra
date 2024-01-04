@@ -1,18 +1,20 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Lenis from '@studio-freight/lenis';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+export const Navbar = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleNavbarToggle = () => {
+		setIsNavOpen(isNavOpen => !isNavOpen);
+	}
+
+	const handleNavLinkClick = () => {
 		setIsNavOpen(isNavOpen => !isNavOpen);
 	}
 
 	useEffect(() => {
 		const body = document.querySelector('body');
 		isNavOpen ? body.classList.add('scroll-disabled') : body.classList.remove('scroll-disabled');
-		const lenis = new Lenis()
-		isNavOpen ? lenis.destroy() : lenis.start();
 	}, [isNavOpen]);
 
 	return (
@@ -25,19 +27,21 @@ const Navbar = () => {
 					<span className="nav__menu-icon-line"></span>
 				</span>
 			</button>
-			<ul className="nav__list">
+			<ul className="nav__list" data-lenis-prevent>
 				<li className="nav__item">
-					<a href="" className="nav__link nav__link--first">Projects</a>
+					<Link onClick={handleNavLinkClick} to="/" className="nav__link">Home</Link>
 				</li>
 				<li className="nav__item">
-					<a href="" className="nav__link nav__link--second">About</a>
+					<Link onClick={handleNavLinkClick} to="/services" className="nav__link">Services</Link>
 				</li>
 				<li className="nav__item">
-					<a href="" className="nav__link nav__link--third">Contact</a>
+				<Link onClick={handleNavLinkClick} to="/projects" className="nav__link">Projects</Link>
+				</li>
+				<li className="nav__item">
+					<Link onClick={handleNavLinkClick} to="/about" className="nav__link">About</Link>
 				</li>
 			</ul>
 		</nav>
 	)
 }
 
-export default Navbar

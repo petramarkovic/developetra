@@ -1,0 +1,14 @@
+// -- text banner
+.text-banner {
+    width: 100%;
+    padding: 3.3333% 0 0;
+    @include media-breakpoint-down(sm) {
+        padding-top: 3rem;
+    }
+}
+
+.text-banner__title {
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+}
