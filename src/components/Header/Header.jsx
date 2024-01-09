@@ -31,7 +31,7 @@ export const Header = () => {
 	<header className={`header ${!visible ? 'header--hidden' : ''}`}>
 		<div className="header__content">
 			<Link to="/" className="header__home">
-				<span className='header__home-text'>NAKD</span>
+				<span className='header__home-text'>NAK<span className='header__home-span'></span>D</span>
 			</Link>
 			<div className='header__row'>
 				<a href="https://calendly.com/d/4z7-bt3-d58/one-off-meeting" target='_blank' className='btn'>Book a call</a>

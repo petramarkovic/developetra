@@ -1,0 +1,19 @@
+// -- projects
+.projects {
+    width: 100%;
+    padding: 3.3333% 0;
+    margin-top: 89px;
+    @include media-breakpoint-down(sm) {
+        padding: 3rem 0 0;
+    }
+}
+
+.projects__title {
+    font-family: $font-accent;
+    padding: 0 1rem;
+}
+
+.projects__content {
+    padding: 3rem 0;
+    @include flex-container(row, space-between, center, wrap);
+}

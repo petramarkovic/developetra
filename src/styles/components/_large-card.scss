@@ -10,7 +10,7 @@
 
 .large-card__content {
 	height: 100%;
-	border-radius: 1rem;
+	border-radius: $border-radius;
 	overflow: hidden;
 	@include media-breakpoint-up(lg) {
 		display: grid;

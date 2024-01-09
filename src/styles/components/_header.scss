@@ -34,6 +34,13 @@
 	line-height: 1;
 }
 
+.header__home-span {
+	// width: 10px;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+}
+
 .header__row {
 	@include flex-container(row, space-between, center);
 	gap: 40px;

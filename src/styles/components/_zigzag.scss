@@ -1,0 +1,25 @@
+// -- zigzag
+.zigzag {
+    width: 100%;
+    padding: 3.3333% 0;
+    margin-top: 89px;
+    @include media-breakpoint-down(sm) {
+        padding: 3rem 0;
+    }
+}
+
+.zigzag__title {
+    font-family: $font-accent;
+    padding: 0 1rem;
+}
+
+.zigzag__content {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.zigzag__text {
+    margin-bottom: 1.5rem;
+}
