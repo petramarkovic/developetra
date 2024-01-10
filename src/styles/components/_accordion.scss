@@ -21,6 +21,7 @@
     font-family: $font-default;
     @include flex-container(row, space-between, center);
     transition: all $transition;
+    color: $black;
     @include hover {
         .accordion__icon {
             & span {
@@ -42,6 +43,7 @@
 .accordion__title {
     font-size: 2.8rem;
     text-align: left;
+    color: $black;
     @include media-breakpoint-down(sm) {
         font-size: 2.3rem;
     }
@@ -63,10 +65,12 @@
     position: relative;
     @include flex-container(row, center, center);
     transition: all $transition;
+    color: $black;
     & span {
         transition: all $transition;
         position: relative;
         z-index: 2;
+        color: $black;
     }
     &::after {
         content: '';
