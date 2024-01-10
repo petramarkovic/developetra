@@ -1,0 +1,20 @@
+// -- fonts
+
+@font-face {
+    font-family: 'Saithik Handwritten';
+    src: url('/fonts/SaithikHandwritten.woff2') format('woff2'),
+        url('/fonts/SaithikHandwritten.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Modern Sans';
+    src: url('/fonts/ModernSansLight.woff2') format('woff2'),
+        url('/fonts/ModernSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

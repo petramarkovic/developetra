@@ -1,0 +1,22 @@
+// -- config files
+@import './config/fonts';
+@import './config/variables';
+@import './config/mixins';
+@import './config/layout';
+@import './config/typography';
+
+// -- ui 
+@import './ui/buttons';
+
+// -- components
+@import './components/header';
+@import './components/banner';
+@import './components/text-banner';
+@import './components/large-card';
+@import './components/contact';
+@import './components/zigzag';
+@import './components/services';
+@import './components/projects';
+@import './components/accordion';
+@import './components/service';
+@import './components/footer';

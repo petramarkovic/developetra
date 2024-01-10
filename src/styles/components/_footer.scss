@@ -1,0 +1,12 @@
+// -- footer
+.footer {
+    width: 100%;
+    padding: 3rem 0;
+    span {
+        color: $black;
+    }
+}
+
+.footer__content {
+    @include flex-container(wor, space-between, center);
+}

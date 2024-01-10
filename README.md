@@ -1,4 +1,4 @@
-# Portfolio Showcase: A Journey in Development
+Showcase: A Journey in Development
 
 Welcome to my digital haven, where creativity meets functionality. My portfolio website is a testament to the synergy of HTML, SCSS, JavaScript, Webpack, GSAP animations, and the innovative lens through which I approach design and development.
 
