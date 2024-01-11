@@ -8,7 +8,9 @@
 
 .accordion--active {
     .accordion__content {
-        max-height: 100%;
+        max-height: 1000px;
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -88,10 +90,12 @@
 }
 
 .accordion__content {
-    transition: max-height $transition-md;
+    transition: max-height $transition-cubic, opacity $transition-slow, visibility $transition-md;
     position: relative;
     max-height: 0;
     overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
     @include media-breakpoint-up(md) {
         @include flex-container(row, space-between, center);
     }
