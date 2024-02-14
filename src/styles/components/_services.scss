@@ -16,9 +16,13 @@
 	max-width: 40rem;
 	margin: 3rem auto;
 	text-align: center;
+	padding: 0 2rem;
 	font-size: 1.2rem;
 	line-height: 1.3rem;
 	span {
 		font-family: $font-accent;
+	}
+	@include media-breakpoint-down(sm) {
+		margin: 4rem auto;
 	}
 }
