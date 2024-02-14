@@ -5,8 +5,8 @@ export const Banner = () => {
 	<section className='banner'>
 		<div className="banner__col bg-noise">
 			<div className="banner__content">
-				<h1 className="h1">Stripping your <span>Shopify</span> stores <span>NAKD</span></h1>
-				<p className="text banner__text">Engage in a unique process that involves simplifying, refining, and enhancing Shopify stores to their essential, stylish, or naked form. This approach suggests a focus on clarity, minimalism, and uncovering the true essence of each store.</p>
+				<h1 className="h1">Stripping your <span>business </span><span>NAKD</span></h1>
+				<p className="text banner__text">Crafting sleek, minimalist web experiences that reveal the true essence of every project. Specializing in frontend development to distill websites to their essential, stylish form.</p>
 			</div>
 		</div>
 		<div className="banner__col">
