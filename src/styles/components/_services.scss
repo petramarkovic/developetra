@@ -11,3 +11,14 @@
     font-family: $font-accent;
     padding: 0 1rem;
 }
+
+.services__description {
+	max-width: 40rem;
+	margin: 3rem auto;
+	text-align: center;
+	font-size: 1.2rem;
+	line-height: 1.3rem;
+	span {
+		font-family: $font-accent;
+	}
+}
