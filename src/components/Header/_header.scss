@@ -1,0 +1,61 @@
+.header {
+	padding: 3rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.header__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__home {
+	font-family: $font-accent;
+	color: $black;
+}
+
+.header__row {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+	@include media-breakpoint-down(lg) {
+		gap: 2rem;
+	}
+}
+
+.header__text {
+	display: flex;	
+	align-items: center;
+	gap: 8px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.header__text-dot {
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	background-color: $green;
+}
+
+.header__link {
+	color: $black;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 12px;
+	svg {
+		width: 0.75rem;
+		height: 0.75rem;
+		transform: rotate(-45deg);
+		transition: all $transition-cubic-fast;
+	}
+	@include hover {
+		svg {
+			transform: rotate(0deg);
+		}
+	}
+}

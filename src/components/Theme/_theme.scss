@@ -1,0 +1,22 @@
+.theme {
+	background: transparent;
+	border: none;
+	align-self: flex-end;
+	cursor: pointer;
+	svg {
+		width: 0.85rem;
+		height: 0.85rem;
+	}
+	.theme--light {
+		display: none;
+	}
+}
+
+.theme--on {
+	.theme--dark {
+		display: block;
+	}
+	.theme--light {
+		display: none;
+	}
+}
