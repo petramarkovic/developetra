@@ -1,10 +1,16 @@
 .header {
-	padding: 3rem;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: calc(100% + 1px);
 	transition: all $transition-cubic;
+	opacity: 0;
+	@include media-breakpoint-up(md) {
+		padding: 3rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 1.5rem;
+	}
 }
 
 .header--dark {
@@ -31,20 +37,27 @@
 .header__row {
 	display: flex;
 	align-items: center;
-	gap: 4rem;
+	@include media-breakpoint-up(lg) {
+		gap: 4rem;
+	}
 	@include media-breakpoint-down(lg) {
 		gap: 2rem;
 	}
 }
 
 .header__text {
-	display: flex;	
-	align-items: center;
-	gap: 8px;
-	font-size: 12px;
-	text-transform: uppercase;
-	color: $black;
-	transition: all $transition-cubic;
+	@include media-breakpoint-up(md) {
+		display: flex;	
+		align-items: center;
+		gap: 8px;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $black;
+		transition: all $transition-cubic;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
 }
 
 .header__text-dot {
@@ -71,5 +84,8 @@
 		svg {
 			transform: rotate(0deg);
 		}
+	}
+	@media screen and (max-width: 415px) {
+		display: none;
 	}
 }

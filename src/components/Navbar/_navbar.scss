@@ -18,9 +18,28 @@
 }
 
 .nav--dark {
-	transition: all $transition-cubic;
 	.nav__list-wrap {
 		background-color: $black;
+	}
+	.nav__menu-icon-line {
+		background-color: $white;
+	}
+	.nav__contact-title {
+		color: $rose;
+	}
+	.nav__contact-link,
+	.nav__link {
+		color: $white;
+	}
+	.nav__contact-link {
+		&::before {
+			background-color: $rose;
+		}
+	}
+	.nav__link {
+		&::before {
+			color: $white;
+		}
 	}
 }
 
@@ -37,10 +56,62 @@
 	height: calc(100vh - 118px);
 	display: flex;
 	gap: 4rem;
+	overflow-y: auto;
+	@include media-breakpoint-down(sm) {
+		top: 69px;
+		flex-direction: column;
+		height: calc(100vh - 69px);
+		.theme {
+			order: 3;
+		}
+	}
 }
 
 .nav__list {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	@include media-breakpoint-up(md) {
+		padding-left: 5.5rem;
+	}
+	@include media-breakpoint-down(sm) {
+		order: 1;
+		padding-left: 0;
+	}
+}
+
+.nav__item {
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.nav__link {
+	color: $black;
+	transition: all $transition-cubic;
+	font-size: 6rem;
+	position: relative;
+	font-weight: $blacktype;
+	display: block;
+	transform: translateY(110%);
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 3px;
+		background-color: $grey;
+		transition: all $transition-cubic;
+	}
+	@include hover {
+		&::before {
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 3rem;
+	}
 }
 
 .nav__menu {
@@ -76,5 +147,47 @@
 }
 
 .nav__contact {
-	align-self: flex-end;
+	@include media-breakpoint-up(md) {
+		align-self: flex-end;
+	}
+	@include media-breakpoint-down(sm) {
+		order: 2;
+	}
+}
+
+.nav__contact-title {
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: $medium;
+	display: block;
+	margin-bottom: 10px;
+	color: $black;
+	transition: all $transition-cubic;
+}
+
+.nav__contact-list-item {
+	margin-bottom: 8px;
+}
+
+.nav__contact-link {
+	transition: all $transition-cubic;
+	color: $black;
+	font-weight: $medium;
+	font-size: 0.85rem;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $grey;
+		transition: all $transition-cubic;
+	}
+	@include hover {
+		&::before {
+			width: 100%;
+		}
+	}
 }
