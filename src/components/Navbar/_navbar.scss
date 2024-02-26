@@ -17,6 +17,13 @@
 	}
 }
 
+.nav--dark {
+	transition: all $transition-cubic;
+	.nav__list-wrap {
+		background-color: $black;
+	}
+}
+
 .nav__list-wrap {
 	visibility: hidden;
 	opacity: 0;

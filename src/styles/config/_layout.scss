@@ -40,6 +40,10 @@ img {
 	@include no-display;
 }
 
+.hidden {
+	display: none;
+}
+
 .bg {
 	&-noise {
 		position: relative;

@@ -4,8 +4,10 @@ import Lenis from '@studio-freight/lenis';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './pages/Home';
+import { ThemeProvider } from './store/ThemeContext';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Theme } from './components/Theme/Theme';
 
 function App() {
 	useEffect(() => {
@@ -29,15 +31,17 @@ function App() {
 	}, []);
 
 	return (
-		<Router>
-			<Header />
-			<main>
-				<Routes>
-					<Route path='/' element={<Home />} />
-				</Routes>
-			</main>
-			<Footer />
-		</Router>
+		<ThemeProvider>
+			<Router>
+				<Header />
+				<main>
+					<Routes>
+						<Route path='/' element={<Home />} />
+					</Routes>
+				</main>
+				<Footer />
+			</Router>
+		</ThemeProvider>
 	);
 }
 

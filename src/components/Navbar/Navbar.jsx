@@ -2,8 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Theme} from '../Theme/Theme';
+import { useTheme } from '../../store/ThemeContext';
 
 export const Navbar = () => {
+	const { theme } = useTheme();
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleNavbarToggle = () => {
 		setIsNavOpen(isNavOpen => !isNavOpen);
@@ -19,7 +21,7 @@ export const Navbar = () => {
 	}, [isNavOpen]);
 
 	return (
-		<nav className={`nav ${isNavOpen ? 'nav--active' : ''}`}>
+		<nav className={`nav ${isNavOpen ? 'nav--active ' : ''}${theme === 'dark' ? 'nav--dark' : ''}`}>
 			<button type='button' className='nav__menu' onClick={handleNavbarToggle}>
 				<span className='nav__menu-text sr-only'>{isNavOpen ? 'Close menu' : 'Open menu'}</span>
 					<span className="nav__menu-icon-line nav__menu-icon-line--half start"></span>

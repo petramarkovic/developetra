@@ -3,7 +3,17 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: calc(100% + 1px);
+	transition: all $transition-cubic;
+}
+
+.header--dark {
+	background-color: $black;
+	.header__text,
+	.header__link,
+	.header__home {
+		color: $white;
+	}
 }
 
 .header__content {
@@ -15,6 +25,7 @@
 .header__home {
 	font-family: $font-accent;
 	color: $black;
+	transition: all $transition-cubic;
 }
 
 .header__row {
@@ -32,6 +43,8 @@
 	gap: 8px;
 	font-size: 12px;
 	text-transform: uppercase;
+	color: $black;
+	transition: all $transition-cubic;
 }
 
 .header__text-dot {
@@ -47,6 +60,7 @@
 	align-items: center;
 	gap: 8px;
 	font-size: 12px;
+	transition: all $transition-cubic;
 	svg {
 		width: 0.75rem;
 		height: 0.75rem;

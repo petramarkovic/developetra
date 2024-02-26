@@ -4,19 +4,11 @@
 	align-self: flex-end;
 	cursor: pointer;
 	svg {
-		width: 0.85rem;
-		height: 0.85rem;
-	}
-	.theme--light {
-		display: none;
+		width: 1.2rem;
+		height: 1.2rem;
 	}
 }
 
-.theme--on {
-	.theme--dark {
-		display: block;
-	}
-	.theme--light {
-		display: none;
-	}
+.theme-dark {
+	color: $white;
 }
