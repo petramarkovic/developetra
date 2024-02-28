@@ -1,3 +1,105 @@
 .banner {
 	height: 100vh;
+	overflow: hidden;
+	@include media-breakpoint-up(md) {
+		padding: 3rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 1.5rem;
+		height: auto;
+	}
+}
+
+.banner--dark {
+	.banner__title {
+		span {
+			color: $white;
+		}
+	}
+	.banner__text {
+		color: $white;
+	}
+	.banner__col {
+		h2 {
+			color: $peach;
+		}
+	}
+}
+
+.banner__content {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+	gap: 2rem;
+	@include media-breakpoint-down(md) {
+		flex-direction: column-reverse;
+	}
+}
+
+.banner__title {
+	span {
+		overflow: hidden;
+		display: block;
+		color: $black;
+		transition: all $transition-cubic;
+		transform: translateY(110%);
+		opacity: 0;
+		font-size: 8rem;
+	}
+	@include media-breakpoint-down(lg) {
+		span {
+			font-size: 6rem;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		align-self: flex-start;
+	}
+	@include media-breakpoint-down(sm) {
+		span {
+			font-size: 3rem;
+		}
+	}
+}
+
+.banner__col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding-top: 10rem;
+	overflow: hidden;
+	h2 {
+		color: $black;
+		transition: all $transition-cubic;
+		opacity: 0.8;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-top: 7rem;
+	}
+}
+
+.banner__text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8px;
+	margin-bottom: 3rem;
+	color: $black;
+	transition: all $transition-cubic;
+	text-align: right;
+	max-width: 400px;
+	font-size: 0.9rem;
+	opacity: 0;
+	transform: translateX(100%);
+	.tag {
+		background-color: $rose;
+		width: 2.2rem;
+		border-radius: 2.2rem;
+		height: 0.5rem;
+	}
+	@include media-breakpoint-down(md) {
+		margin-top: 6rem;
+	}
 }

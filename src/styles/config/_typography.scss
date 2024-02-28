@@ -1,45 +1,11 @@
 // -- typography
-h1, .h1 {
-    font-weight: $light;
-    font-family: $font-default;
-    font-size: 2.5rem;
-    text-align: center;
-    span {
-        font-style: italic;
-        font-family: $font-accent;
-        font-weight: $regular;
-        font-size: 2.8rem;
-    }
-    @include media-breakpoint-down(sm) {
-        span {
-            font-size: 2.3rem;
-        }
-    }
-}
-
-h2, .h2 {
-    font-size: 3rem;
-    font-weight: $light;
-    span {
-        font-style: italic;
-        font-family: $font-accent;
-        font-weight: $regular;
-        font-size: 4rem;
-        line-height: 0.8;
-    }
-}
-
-h3, .h3 {
-    font-size: 3.3rem;
-    letter-spacing: -0.05rem;
-    margin-bottom: 1rem;
-    @include media-breakpoint-down(sm) {
-        font-size: 2rem;
-    }
-}
-
-.tag {
-    font-family: $font-accent;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.h2 {
+	font-family: $font-accent;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	transform: translateX(-100%);
+	span {
+		display: block;
+	}
 }

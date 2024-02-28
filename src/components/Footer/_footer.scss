@@ -1,0 +1,28 @@
+.footer {
+	transition: all $transition-cubic;
+	background-color: $background;
+	@include media-breakpoint-up(md) {
+		padding: 3rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 1.5rem;
+	}
+}
+
+.footer--dark {
+	background: $black;
+	.footer__copy {
+		color: $peach;
+	}
+}
+
+.footer__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__copy {
+	transition: all $transition-cubic;
+	color: $black;
+}

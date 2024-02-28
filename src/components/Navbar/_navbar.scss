@@ -57,6 +57,7 @@
 	display: flex;
 	gap: 4rem;
 	overflow-y: auto;
+	background-color: $background;
 	@include media-breakpoint-down(sm) {
 		top: 69px;
 		flex-direction: column;
@@ -92,7 +93,7 @@
 	font-size: 6rem;
 	position: relative;
 	font-weight: $blacktype;
-	display: block;
+	display: inline-block;
 	transform: translateY(110%);
 	&::before {
 		content: '';

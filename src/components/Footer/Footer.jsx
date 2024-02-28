@@ -1,13 +1,18 @@
-import React from 'react'
+import { Theme } from '../Theme/Theme';
+import { useTheme } from '../../store/ThemeContext';
 
 export const Footer = () => {
-  return (
-	<footer className="footer">
-		<div className="footer__content">
-			<span>developetra</span>
-			<span>2024</span>
-		</div>
-	</footer>
-  )
-}
+	const { theme } = useTheme();
 
+	return (
+		<footer className={`footer ${theme === 'dark' ? 'footer--dark' : ''}`}>
+			<div className='footer__content'>
+				<div className="footer__copy">
+					<span>developetra &copy; </span>
+					<span>2024</span>
+				</div>
+				<Theme />
+			</div>
+		</footer>
+	);
+};

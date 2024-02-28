@@ -1,5 +1,5 @@
-import React from 'react';
 import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Theme} from '../Theme/Theme';
@@ -21,10 +21,7 @@ export const Navbar = () => {
 	const projectsRef = useRef();
 	const aboutRef = useRef();
 
-	useEffect(() => {
-		const body = document.querySelector('body');
-		isNavOpen ? body.classList.add('scroll-disabled') : body.classList.remove('scroll-disabled');
-
+	useGSAP(() => {
 		gsap.registerPlugin();
 
 		if (isNavOpen) {
@@ -36,6 +33,12 @@ export const Navbar = () => {
 		} else {
 			gsap.set([homeRef.current, projectsRef.current, aboutRef.current], { y: 500 });
 		}
+
+	}, { dependencies: [isNavOpen] })
+
+	useEffect(() => {
+		const body = document.querySelector('body');
+		isNavOpen ? body.classList.add('scroll-disabled') : body.classList.remove('scroll-disabled');
 
 	}, [isNavOpen]);
 

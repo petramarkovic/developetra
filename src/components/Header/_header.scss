@@ -2,9 +2,10 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: calc(100% + 1px);
+	width: 100%;
 	transition: all $transition-cubic;
 	opacity: 0;
+	z-index: 99;
 	@include media-breakpoint-up(md) {
 		padding: 3rem;
 	}
@@ -32,6 +33,9 @@
 	font-family: $font-accent;
 	color: $black;
 	transition: all $transition-cubic;
+	@include hover {
+		opacity: 0.8;
+	}
 }
 
 .header__row {
